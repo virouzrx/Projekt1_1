@@ -164,6 +164,9 @@
     <EmbeddedResource Include="AddCar.resx">
       <DependentUpon>AddCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddDriver.resx">
+      <DependentUpon>AddDriver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateDatabaseForm.resx">
       <DependentUpon>CreateDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
