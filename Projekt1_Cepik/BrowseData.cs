@@ -27,24 +27,31 @@ namespace Projekt1_Cepik
         {
             using (var context = new CepikDB())
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Projekt1_Cepik.CepikDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-                connection.Open();
-                string sqlCommand = "SELECT CarId[ID pojazdu], LicensePlateNumber[Nr tablicy rejestracyjnej]," +
-                                                            "CarModel [Model pojazdu], CarCompany [Marka], DriverId [Wlasciciel] " +
-                                                    "FROM Cars WHERE CarId = @ID";
-                SqlCommand command = new SqlCommand(sqlCommand, connection);
-                command.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
-                
-                SqlDataReader da = command.ExecuteReader();
-                while (da.Read())
-                {
-                    textBox3.Text = da.GetValue(0).ToString();
-                    textBox3.Text = da.GetValue(1).ToString();
-                    textBox3.Text = da.GetValue(2).ToString();
-                    textBox3.Text = da.GetValue(3).ToString();
-                    textBox3.Text = da.GetValue(4).ToString();
-                }
-                connection.Close();
+                /*  SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Projekt1_Cepik.CepikDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                  connection.Open();
+                  string sqlCommand = "SELECT CarId[ID pojazdu], LicensePlateNumber[Nr tablicy rejestracyjnej]," +
+                                                              "CarModel [Model pojazdu], CarCompany [Marka], DriverId [Wlasciciel] " +
+                                                      "FROM Cars WHERE CarId = @ID";
+                  SqlCommand command = new SqlCommand(sqlCommand, connection);
+                  command.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
+
+                  SqlDataReader da = command.ExecuteReader();
+                  while (da.Read())
+                  {
+                      textBox3.Text = da.GetValue(0).ToString();
+                      textBox3.Text = da.GetValue(1).ToString();
+                      textBox3.Text = da.GetValue(2).ToString();
+                      textBox3.Text = da.GetValue(3).ToString();
+                      textBox3.Text = da.GetValue(4).ToString();
+                  }
+                  connection.Close(); */ // <^ - to nie działa nie wiem czemu
+                int number;
+                bool success = Int32.TryParse(textBox1.Text, out number);
+                var displayCars = context 
+                    .Pojazdy
+                    .Where(u=> u.CarId == number)
+                    .Select(*)
+                    .
             }
          
         }
