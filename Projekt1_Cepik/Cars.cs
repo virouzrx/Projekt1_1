@@ -19,6 +19,7 @@ namespace Projekt1_Cepik
         public int DriverId { get; set; }
         public virtual Drivers Driver { get; set; }
         public virtual ICollection<TechnicalReview> TechnicalReviews { get; set; } = new List<TechnicalReview>();
+        public virtual ICollection<InsurancePolicy> InsurancePolicies { get; set; } = new List<InsurancePolicy>();
         public virtual ICollection<CarDocsAndInfo> CarDocsAndInfos { get; set; } = new List<CarDocsAndInfo>();
     }
 }

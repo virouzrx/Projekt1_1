@@ -76,6 +76,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "Wstecz";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -242,7 +243,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(116, 251);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 21);
+            this.label14.Size = new System.Drawing.Size(49, 17);
             this.label14.TabIndex = 42;
             this.label14.Text = "Miasto";
             // 
@@ -305,7 +306,7 @@
             this.label19.ForeColor = System.Drawing.Color.Red;
             this.label19.Location = new System.Drawing.Point(455, 299);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(249, 21);
+            this.label19.Size = new System.Drawing.Size(199, 17);
             this.label19.TabIndex = 48;
             this.label19.Text = "Niepoprawnie wpisany PESEL!";
             // 

@@ -11,9 +11,10 @@ namespace Projekt1_Cepik
     class CarDocsAndInfo
     {
         [Key]
-        public int VinNumber { get; set; }
+        public string VinNumber { get; set; }
         public string CarCardNumber { get; set; }
         public DateTime FirstRegistrationDate { get; set; }
+        public int CarId { get; set; }
         public virtual Cars Car { get; set; }
     }
 }

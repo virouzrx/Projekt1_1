@@ -150,5 +150,13 @@ namespace Projekt1_Cepik
             
         }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Back = new ProgramAddData();
+            Back.Closed += (s, args) => this.Close();
+            Back.Show();
+        }
     }
 }

@@ -40,7 +40,15 @@ namespace Projekt1_Cepik
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var NewBrowseDataForm = new ProgramBrowseData();
+            var NewBrowseDataForm = new BrowseData();
+            NewBrowseDataForm.Closed += (s, args) => this.Close();
+            NewBrowseDataForm.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            var NewBrowseDataForm = new BrowseData();
             NewBrowseDataForm.Closed += (s, args) => this.Close();
             NewBrowseDataForm.Show();
         }
