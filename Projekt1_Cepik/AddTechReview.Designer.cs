@@ -145,20 +145,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 130);
+            this.label3.Location = new System.Drawing.Point(90, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 17);
+            this.label3.Size = new System.Drawing.Size(163, 17);
             this.label3.TabIndex = 46;
-            this.label3.Text = "Data zawarcia polisy";
+            this.label3.Text = "Data wykonania badania";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(99, 178);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 17);
+            this.label2.Size = new System.Drawing.Size(154, 17);
             this.label2.TabIndex = 45;
-            this.label2.Text = "Data wygaśnięcia polisy";
+            this.label2.Text = "Data ważności badania";
             // 
             // textBox3
             // 
