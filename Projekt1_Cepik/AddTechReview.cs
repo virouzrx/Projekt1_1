@@ -120,7 +120,7 @@ namespace Projekt1_Cepik
                 }
                 else if (RegexDate.IsMatch(textBox3.Text))
                 {
-                    techReview.TechnicalReviewDate = DateTime.Parse(textBox3.Text);
+                    techReview.TechnicalReviewDate = DateTime.Parse(textBox3.Text); // <- dlaczego nagle pojawia się wyjątek?
                     DateCondition = true;
                 }
 

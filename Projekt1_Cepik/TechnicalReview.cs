@@ -13,7 +13,7 @@ namespace Projekt1_Cepik
         [Key]
         public int TechnicalReviewID { get; set; }
         public DateTime TechnicalReviewDate { get; set; }
-        public DateTime? TechnicalReviewExpiryDate { get; set; }
+        public DateTime TechnicalReviewExpiryDate { get; set; }
         public bool TechnicalReviewStatus { get; set; }
         public int CarId { get; set; }
         public virtual Cars Car { get; set; }

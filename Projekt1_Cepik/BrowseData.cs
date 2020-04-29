@@ -45,13 +45,7 @@ namespace Projekt1_Cepik
                       textBox3.Text = da.GetValue(4).ToString();
                   }
                   connection.Close(); */ // <^ - to nie działa nie wiem czemu
-                int number;
-                bool success = Int32.TryParse(textBox1.Text, out number);
-                var displayCars = context 
-                    .Pojazdy
-                    .Where(u=> u.CarId == number)
-                    .Select(*)
-                    .
+            
             }
          
         }
