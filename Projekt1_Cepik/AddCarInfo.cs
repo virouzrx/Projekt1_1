@@ -34,7 +34,7 @@ namespace Projekt1_Cepik
                 var carInfo  = new CarDocsAndInfo();
                 var RegexVIN = new Regex(@"^[A-Z0-9]{17}$");
                 var RegexDate = new Regex(@"^[0-3][0-9]\/[0-1][0-9]\/[0-2][0-9]{3}$");
-                var RegexCarId = new Regex(@"^[0-9]{1,6}$");
+                var RegexCarId = new Regex(@"^[0-9]23/$");
                 bool VINcondition = true;
                 bool DateCondition = true;
                 bool IdCondition = true;
@@ -100,6 +100,7 @@ namespace Projekt1_Cepik
 
                 if (IdCondition && DateCondition && VINcondition)
                 {
+                    context.Informacje.Add(carInfo);
                     context.SaveChanges();
                 }
 
